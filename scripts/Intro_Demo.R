@@ -10,6 +10,7 @@ library(reshape2)
 library (ggplot2)
 library(lubridate)
 library(SWMPr)
+library(ggpubr)
 
 #Set your working directory
 
@@ -67,9 +68,11 @@ ggplot(wq_lks_mean_subset,aes(x=Date,y=value))+
   facet_wrap(station~variable,scales="free_y")+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
-##Change the labels to the actual station names - can be found on CDMO
+##Change the labels to the actual station names for PDB - can be found on CDMO
 wq_lks_mean_subset$station<-factor(wq_lks_mean_subset$station, 
-       labels=c("Barker's Island","Blatnik Bridge", "Oliver Bridge", "Pokegama Bay"))
+       labels=c("Joe Leary Tidegate","Joe Leary Estuary", "Gong Deep",
+                "Ploeg Channel"))#, "Bayview Channel", "Gong Surface",
+                #"Joe Leary Slough",  "Padilla Bay Farm"))
 
 ggplot(wq_lks_mean_subset,aes(x=Date,y=value))+
   geom_point()+
@@ -92,6 +95,7 @@ ggplot(wq_lks_mean_subset,aes(x=Date_month,y=value,group=month))+
   scale_x_date(date_breaks = "1 month", date_labels =  "%b") +
   facet_wrap(station~variable,scales="free_y")+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
 
 ggplot(wq_lks_mean_subset)+
   geom_boxplot(aes(x=Date_month,y=value,group=month))+
@@ -152,7 +156,9 @@ ggplot(nut_lks_long_subset,aes(x=Date,y=value))+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 nut_lks_long_subset$station<-factor(nut_lks_long_subset$station, 
-                                   labels=c("Barker's Island","Blatnik Bridge", "Oliver Bridge", "Pokegama Bay"))
+                                    labels=c("Joe Leary Tidegate","Joe Leary Estuary", "Gong Deep",
+                                             "Ploeg Channel"))#, "Bayview Channel", "Gong Surface",
+#"Joe Leary Slough",  "Padilla Bay Farm"))
 
 nut_lks_long_subset$Date <- make_date(year = nut_lks_long_subset$year, 
                                       month = nut_lks_long_subset$month)

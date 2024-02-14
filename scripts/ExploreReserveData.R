@@ -6,16 +6,16 @@
 setwd("/Users/hitelab/OneDrive/Master/R_projects/SWMPProject")
 
 # Identify the meteorological (met), nutrient (nut), and water quality (WQ) data files for your reserve
-metFile <- read.csv("Data/APA/met_apa.csv")
-nutFile = read.csv("Data/APA/nut_apa.csv")
-wqFile  = read.csv("Data/APA/wq_apa.csv")
+metFile <- read.csv("Data/PDB/met_pdb.csv")
+nutFile = read.csv("Data/PDB/nut_pdb.csv")
+wqFile  = read.csv("Data/PDB/wq_pdb.csv")
 # End user input section
 ###########################
 
 # Load the data into separate data frames
-datMet = read.csv("Data/APA/met_apa.csv")
-datNut =  read.csv("Data/APA/nut_apa.csv")
-datWQ  = read.csv("Data/APA/wq_apa.csv")
+datMet = read.csv("Data/PDB/met_pdb.csv")
+datNut =  read.csv("Data/PDB/nut_pdb.csv")
+datWQ  = read.csv("Data/PDB/wq_pdb.csv")
 
 
 
