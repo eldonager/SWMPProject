@@ -50,7 +50,7 @@ for (i in 5:dim(datMet)[2]){
 
 # For nutrient and water quality data, there can be several sites
 # Setup color scheme for plotting multiple sites per panel
-myCol = c('black','red','blue','green')
+myCol = c('black','red','blue','green', 'maroon', 'cyan', 'orange')
 
 # Cycle through the nutrient data and plot
 par(mfrow=c(3,1),lend=2,mai = c(0.25,0.75, 0.08, 0.05),oma = c(2,1,0.2,0.2), cex = 0.8)
