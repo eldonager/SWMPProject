@@ -2,13 +2,6 @@
 ###########################
 # Begin user input section
 
-library(here)
-library(dplyr)
-library(reshape2) 
-library (ggplot2)
-library(lubridate)
-library(SWMPr)
-library(ggpubr)
 # Set the working directory to wherever this script is located
 setwd("/Users/hitelab/OneDrive/Master/R_projects/SWMPProject")
 
